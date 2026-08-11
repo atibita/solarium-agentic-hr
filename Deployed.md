@@ -22,10 +22,10 @@ commands to gather that data are provided so this stays a 2-minute task.
 
 ## Fill in after deploying
 
-**Web app URL:** `https://<your-service-name>.onrender.com`
+**Web app URL:** `https://solarium-agentic-hr.onrender.com/`
 *(or the equivalent Railway-generated domain)*
 
-**Health check URL:** `https://<your-service-name>.onrender.com/health`
+**Health check URL:** `https://solarium-agentic-hr.onrender.com/health`
 
 Expected response shape:
 ```json
@@ -52,10 +52,10 @@ To measure your actual cold-start time after deploying:
 ```bash
 # Wait until the service has been idle (Render free tier: ~15 minutes),
 # then time the first request:
-time curl -s https://<your-service-name>.onrender.com/health
+time curl -s https://solarium-agentic-hr.onrender.com/health
 
 # Then immediately measure a warm request:
-time curl -s https://<your-service-name>.onrender.com/health
+time curl -s https://solarium-agentic-hr.onrender.com/health
 ```
 
 Record the results here:
