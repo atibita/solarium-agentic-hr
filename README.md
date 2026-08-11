@@ -120,7 +120,7 @@ python -m app.main
 # or: flask --app app.main run --debug
 ```
 
-Visit **http://localhost:8000**. Try the sidebar's demo-task buttons, or
+Visit **https://solarium-agentic-hr.onrender.com/**. Try the sidebar's demo-task buttons, or
 ask something like *"How many weeks of parental leave do I get?"*.
 
 ### Run the MCP server as a separate process (optional, HTTP transport)
@@ -166,13 +166,13 @@ includes a 3rd action-confirmation demo).
 Via API:
 ```bash
 # Demo 1 — remote work eligibility (multi-step: RAG + employee profile)
-curl -s localhost:8000/chat -H 'Content-Type: application/json' -d '{
+curl -s https://solarium-agentic-hr.onrender.com/chat -H 'Content-Type: application/json' -d '{
   "message": "Can I work remotely from Portugal for a month?",
   "employee_id": "EMP-0006"
 }' | python3 -m json.tool
 
 # Demo 2 — PTO request guidance (multi-step: PTO balance + RAG)
-curl -s localhost:8000/chat -H 'Content-Type: application/json' -d '{
+curl -s https://solarium-agentic-hr.onrender.com/chat -H 'Content-Type: application/json' -d '{
   "message": "I want to take 2 weeks of PTO in October, what do I need to know?",
   "employee_id": "EMP-0010"
 }' | python3 -m json.tool
@@ -200,7 +200,7 @@ Architecture"](design-and-evaluation.md#deployment-architecture); summary:
 1. Deploy a second Render/Railway web service for the MCP server:
    Start command: `python -m app.rag.ingest && python -m mcp_server.run_http`
 2. On the main web service, set `MCP_TRANSPORT=http` and
-   `MCP_SERVER_URL=https://<your-mcp-service>.onrender.com`.
+   `MCP_SERVER_URL=https://solarium-agentic-hr.onrender.com/`.
 3. Redeploy the main service.
 
 Railway: identical build/start commands via `railway.json`, or paste them
