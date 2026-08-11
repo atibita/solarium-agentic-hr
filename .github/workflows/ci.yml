@@ -1,0 +1,79 @@
+# .github/workflows/ci.yml
+# --------------------------
+# CI/CD pipeline: on every push and pull request, install dependencies,
+# build the RAG index, run an import/start smoke check, run the full unit
+# test suite (including MCP tool discovery/call tests and an app-start
+# test), and only then run a (simulated) deploy step. Deployment is
+# gated behind the test job succeeding — see the `needs: test` dependency
+# on the `deploy` job below.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build RAG index (deterministic; fails the build if any policy doc is unparsable)
+        run: python -m app.rag.ingest
+
+      - name: Import / start smoke check
+        run: |
+          python -c "from app.main import create_app; app = create_app(); print('App created OK:', app.name)"
+          python -c "from mcp_server.server import get_registry; r = get_registry(); assert len(r.list_tools()) >= 5; print('MCP tools OK:', len(r.list_tools()))"
+
+      - name: Run unit tests (health, RAG, MCP tools, agent workflows)
+        run: python -m pytest tests/ -v
+
+      - name: Run evaluation suite (non-blocking metrics report)
+        run: python -m evaluation.run_eval
+        continue-on-error: true  # evaluation is a report, not a pass/fail gate
+
+      - name: Upload evaluation results
+        uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-results
+          path: evaluation/results.json
+
+  deploy:
+    needs: test  # deployment only runs if the test job succeeded
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Trigger Render deploy hook
+        # Configure a Render "Deploy Hook" URL for solarium-hr-web (and,
+        # optionally, solarium-mcp-server) and store it as a GitHub Actions
+        # secret named RENDER_DEPLOY_HOOK_URL. Render/Railway both also
+        # support auto-deploy-on-push directly from the dashboard, which is
+        # the simpler option for most students — this explicit curl step is
+        # provided for when you want deploys strictly gated behind this
+        # workflow's test job rather than Render's own push trigger.
+        if: env.RENDER_DEPLOY_HOOK_URL != ''
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: curl -fsS -X POST "$RENDER_DEPLOY_HOOK_URL"
+
+      - name: No deploy hook configured
+        if: env.RENDER_DEPLOY_HOOK_URL == ''
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: echo "RENDER_DEPLOY_HOOK_URL secret not set -- skipping deploy trigger. See README 'CI/CD' section."

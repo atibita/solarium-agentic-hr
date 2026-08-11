@@ -1,0 +1,531 @@
+{
+  "generated_at": "2026-08-10T15:49:51Z",
+  "question_count": 26,
+  "summary": {
+    "groundedness_rate": 1.0,
+    "citation_accuracy_rate": 1.0,
+    "multi_doc_rate": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "escalation_clarification_accuracy": 1.0,
+    "out_of_scope_refusal_rate": 1.0,
+    "action_safety_pass_rate": 1.0,
+    "action_confirmation_executes_rate": 1.0,
+    "workflow_completion_rate": 1.0,
+    "latency_ms_p50": 0.98,
+    "latency_ms_p95": 3.2,
+    "latency_ms_mean": 1.39
+  },
+  "ablation": {
+    "dimension": "retrieval_k",
+    "query": "If a company holiday falls during my approved parental leave, is it paid, and separately, does taking that leave affect how many PTO days I can carry over into next year?",
+    "rows": [
+      {
+        "k": 3,
+        "result_count": 3,
+        "documents_covered": [
+          "SOL-HR-102",
+          "SOL-HR-999",
+          "SOL-HR-101"
+        ],
+        "unique_doc_count": 3,
+        "mean_rerank_score": 0.2843
+      },
+      {
+        "k": 5,
+        "result_count": 5,
+        "documents_covered": [
+          "SOL-HR-102",
+          "SOL-HR-999",
+          "SOL-HR-101"
+        ],
+        "unique_doc_count": 3,
+        "mean_rerank_score": 0.2566
+      },
+      {
+        "k": 8,
+        "result_count": 8,
+        "documents_covered": [
+          "SOL-HR-102",
+          "SOL-HR-999",
+          "SOL-HR-101"
+        ],
+        "unique_doc_count": 3,
+        "mean_rerank_score": 0.2289
+      },
+      {
+        "k": 12,
+        "result_count": 12,
+        "documents_covered": [
+          "SOL-HR-102",
+          "SOL-HR-999",
+          "SOL-HR-101"
+        ],
+        "unique_doc_count": 3,
+        "mean_rerank_score": 0.2053
+      }
+    ]
+  },
+  "per_question": [
+    {
+      "id": "Q01",
+      "category": "policy_qa",
+      "question": "How many days of bereavement leave do I get for an immediate family member?",
+      "workflow": "policy_qa",
+      "latency_ms": 15.0,
+      "cited_docs": [
+        "SOL-HR-101",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-101, 7. Bereavement Leave): - 5 paid days for the death of an immediate family member (spouse/partner, child, parent, sibling, grandparent, grandchil",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q02",
+      "category": "policy_qa",
+      "question": "How many weeks of parental leave does Solarium offer and at what percentage of pay?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.12,
+      "cited_docs": [
+        "SOL-HR-101",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-999, SECTION 1 \u2014 PTO, HOLIDAYS, AND LEAVE): -------------------------------------------------------------------------------- Q: How much PTO do I get",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q03",
+      "category": "policy_qa",
+      "question": "How many company holidays does Solarium observe in the US in 2026, including Winter Break?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.11,
+      "cited_docs": [
+        "SOL-HR-102",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-999, SECTION 1 \u2014 PTO, HOLIDAYS, AND LEAVE): leave do I get? A: 12 weeks at 100% pay, available from day one of employment, for all parents regardless",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q04",
+      "category": "policy_qa",
+      "question": "How many floating holidays do employees get per year?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.09,
+      "cited_docs": [
+        "SOL-HR-102",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-102, Introduction): 3 is observed instead | | Labor Day | Monday, September 7 | | | Thanksgiving Day | Thursday, November 26 | | | Day After Thanksgi",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q05",
+      "category": "policy_qa",
+      "question": "What is the daily meal limit for business travel expenses?",
+      "workflow": "expense_compliance",
+      "latency_ms": 1.4,
+      "cited_docs": [
+        "SOL-FIN-301"
+      ],
+      "called_tools": [
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**From your records:**\n- Compliance check for 'What is the daily meal limit for business travel expenses?': **needs_human_review** -- A relevant policy section was found, but autom",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q06",
+      "category": "policy_qa",
+      "question": "How long do I have to submit an expense after incurring it?",
+      "workflow": "policy_qa",
+      "latency_ms": 0.88,
+      "cited_docs": [
+        "SOL-FIN-301",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-999, SECTION 3 \u2014 EXPENSES): -------------------------------------------------------------------------------- Q: How long do I have to submit an expen",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q07",
+      "category": "policy_qa",
+      "question": "What is Solarium's 401(k) match?",
+      "workflow": "benefits_question",
+      "latency_ms": 0.6,
+      "cited_docs": [
+        "SOL-HR-103"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-103, 4. Retirement Plan (401(k))): - Eligible from your first day of employment; auto-enrolled at a 4% contribution rate 30 days after hire unless yo",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q08",
+      "category": "policy_qa",
+      "question": "How much is the monthly wellness stipend?",
+      "workflow": "benefits_question",
+      "latency_ms": 0.53,
+      "cited_docs": [
+        "SOL-HR-103"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-103, 6. Wellness Benefits): - Wellness stipend: $75/month, usable for gym memberships, fitness classes, mental health apps, or similar wellness expen",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q09",
+      "category": "policy_qa",
+      "question": "How long do I have to report a lost or stolen company device?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.09,
+      "cited_docs": [
+        "SOL-HR-999",
+        "SOL-OPS-202",
+        "SOL-SEC-401"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-SEC-401, 4.3 Lost or Stolen Devices): Report a lost or stolen device \u2014 company-issued or BYOD enrolled in the work profile \u2014 to IT Security within 1 hou",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q10",
+      "category": "policy_qa",
+      "question": "Can I paste customer payment data into an AI chat tool?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.15,
+      "cited_docs": [
+        "SOL-HR-999",
+        "SOL-SEC-401"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-999, SECTION 4 \u2014 DATA SECURITY): -------------------------------------------------------------------------------- Q: I think I clicked a phishing lin",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q11",
+      "category": "policy_qa",
+      "question": "How much is the one-time home office setup stipend for remote employees?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.22,
+      "cited_docs": [
+        "SOL-FIN-301",
+        "SOL-HR-999",
+        "SOL-OPS-201",
+        "SOL-OPS-202"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-OPS-201, 4. Home Office Stipend): Remote and hybrid employees receive aone-time $750 home office setup stipendwithin their first 60 days, plus anongoing",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q12",
+      "category": "policy_qa",
+      "question": "What training do I need to complete on Day 1 of onboarding?",
+      "workflow": "policy_qa",
+      "latency_ms": 0.95,
+      "cited_docs": [
+        "SOL-HR-103",
+        "SOL-HR-104",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-999, SECTION 6 \u2014 ONBOARDING): -------------------------------------------------------------------------------- Q: When will my equipment arrive? A: I",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q13",
+      "category": "policy_qa",
+      "question": "How much can I get for ergonomic equipment like a chair, and how often?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.01,
+      "cited_docs": [
+        "SOL-HR-999",
+        "SOL-OPS-202"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-999, SECTION 7 \u2014 EQUIPMENT): -------------------------------------------------------------------------------- Q: What do I get when I'm hired? A: A l",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q14",
+      "category": "policy_qa",
+      "question": "If I report a harassment concern that turns out to be inconclusive, will that be held against me?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.01,
+      "cited_docs": [
+        "SOL-GOV-000",
+        "SOL-HR-105",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-999, SECTION 8 \u2014 WORKPLACE CONDUCT): -------------------------------------------------------------------------------- Q: How do I report a harassment",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true
+    },
+    {
+      "id": "Q15",
+      "category": "multi_document",
+      "question": "If a company holiday falls during my approved parental leave, is it paid, and separately, does taking that leave affect how many PTO days I can carry over into next year?",
+      "workflow": "policy_qa",
+      "latency_ms": 1.14,
+      "cited_docs": [
+        "SOL-HR-101",
+        "SOL-HR-102",
+        "SOL-HR-999"
+      ],
+      "called_tools": [
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Relevant policy:**\n- (SOL-HR-102, Introduction): genuine emergency. 2. You choose, in agreement with your manager, either (a) 1.5x your normal hourly-equivalent pay for the hours",
+      "groundedness_pass": true,
+      "citation_accuracy_pass": true,
+      "multi_doc_pass": true
+    },
+    {
+      "id": "Q16",
+      "category": "tool_required",
+      "question": "What's my current PTO balance?",
+      "workflow": "pto_request_guidance",
+      "latency_ms": 3.2,
+      "cited_docs": [
+        "SOL-HR-101"
+      ],
+      "called_tools": [
+        "check_pto_balance",
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**From your records:**\n- PTO balance: 7.87 days \u00b7 Sick leave: 36.0 hours \u00b7 Floating holidays remaining: 2 (as of 2026-08-10)\n\n**Relevant policy:**\n- (SOL-HR-101, 4. PTO Carryover a",
+      "tool_selection_pass": true
+    },
+    {
+      "id": "Q17",
+      "category": "tool_required",
+      "question": "Who is my manager and what's my work model?",
+      "workflow": "employee_lookup",
+      "latency_ms": 0.03,
+      "cited_docs": [],
+      "called_tools": [
+        "lookup_employee_profile"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**Femi Thackeray** -- Engineering Manager, Engineering\n- Manager: Caleb Odusanya\n- Work model: Remote \u00b7 Office: Solarium - Lisbon\n- Employment type: Full-Time \u00b7 Tenure band: 3-5 ye",
+      "tool_selection_pass": true
+    },
+    {
+      "id": "Q18",
+      "category": "tool_required",
+      "question": "What health plan am I enrolled in?",
+      "workflow": "benefits_question",
+      "latency_ms": 0.76,
+      "cited_docs": [
+        "SOL-HR-103"
+      ],
+      "called_tools": [
+        "lookup_benefits_status",
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**From your records:**\n- Health plan: PPO Health Plan \u00b7 Dental: Enrolled \u00b7 Vision: Enrolled \u00b7 Retirement contribution: 10%\n\n**Relevant policy:**\n- (SOL-HR-103, 3. Health, Dental, a",
+      "tool_selection_pass": true
+    },
+    {
+      "id": "Q19",
+      "category": "tool_required",
+      "question": "Is a $90 client dinner within policy?",
+      "workflow": "expense_compliance",
+      "latency_ms": 1.29,
+      "cited_docs": [
+        "SOL-FIN-301"
+      ],
+      "called_tools": [
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**From your records:**\n- Compliance check for 'Is a $90 client dinner within policy?': **needs_human_review** -- A relevant policy section was found, but automatic amount-vs-cap co",
+      "tool_selection_pass": true
+    },
+    {
+      "id": "Q20",
+      "category": "tool_required",
+      "question": "Can I work remotely from Portugal for a month?",
+      "workflow": "remote_work_eligibility",
+      "latency_ms": 0.63,
+      "cited_docs": [
+        "SOL-OPS-201"
+      ],
+      "called_tools": [
+        "lookup_employee_profile",
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**From your records:**\n- Femi Thackeray \u00b7 Engineering Manager \u00b7 Remote \u00b7 Solarium - Lisbon\n\n**Relevant policy:**\n- (SOL-OPS-201, 3. Eligibility for Remote or Hybrid Work): Eligibil",
+      "tool_selection_pass": true
+    },
+    {
+      "id": "Q21",
+      "category": "tool_required",
+      "question": "I want to take 2 weeks of PTO in October, what do I need to know?",
+      "workflow": "pto_request_guidance",
+      "latency_ms": 0.78,
+      "cited_docs": [
+        "SOL-HR-101"
+      ],
+      "called_tools": [
+        "check_pto_balance",
+        "search_policy_documents"
+      ],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "**From your records:**\n- PTO balance: 5.56 days \u00b7 Sick leave: 28.5 hours \u00b7 Floating holidays remaining: 0 (as of 2026-08-10)\n\n**Relevant policy:**\n- (SOL-HR-101, 3. Requesting and ",
+      "tool_selection_pass": true
+    },
+    {
+      "id": "Q22",
+      "category": "ambiguous",
+      "question": "Open a ticket for my laptop issue",
+      "workflow": "hr_ticket_action",
+      "latency_ms": 0.02,
+      "cited_docs": [],
+      "called_tools": [],
+      "clarification_needed": true,
+      "pending_action": false,
+      "answer_preview": "I can open that ticket, but I need your employee ID first (e.g. EMP-0012).",
+      "escalation_pass": true
+    },
+    {
+      "id": "Q23",
+      "category": "ambiguous",
+      "question": "",
+      "workflow": "clarification",
+      "latency_ms": 0.0,
+      "cited_docs": [],
+      "called_tools": [],
+      "clarification_needed": true,
+      "pending_action": false,
+      "answer_preview": "I didn't receive a question -- what would you like to know?",
+      "escalation_pass": true
+    },
+    {
+      "id": "Q24",
+      "category": "out_of_scope",
+      "question": "What's the weather like in Austin today?",
+      "workflow": "out_of_scope",
+      "latency_ms": 0.01,
+      "cited_docs": [],
+      "called_tools": [],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "That's outside what I can help with \u2014 I'm scoped to Solarium HR policy topics (PTO, holidays, remote work, expenses, data security, benefits, onboarding, equipment, and workplace c",
+      "out_of_scope_pass": true
+    },
+    {
+      "id": "Q25",
+      "category": "out_of_scope",
+      "question": "Can you write me a poem about spring?",
+      "workflow": "out_of_scope",
+      "latency_ms": 0.01,
+      "cited_docs": [],
+      "called_tools": [],
+      "clarification_needed": false,
+      "pending_action": false,
+      "answer_preview": "That's outside what I can help with \u2014 I'm scoped to Solarium HR policy topics (PTO, holidays, remote work, expenses, data security, benefits, onboarding, equipment, and workplace c",
+      "out_of_scope_pass": true
+    },
+    {
+      "id": "Q26",
+      "category": "action_confirmation",
+      "question": "My laptop screen cracked, please open an IT ticket for me",
+      "workflow": "hr_ticket_action",
+      "latency_ms": 0.03,
+      "cited_docs": [],
+      "called_tools": [],
+      "clarification_needed": false,
+      "pending_action": true,
+      "answer_preview": "I can open a **IT** ticket (priority: Medium) with this description:\n\n> My laptop screen cracked, please open an IT ticket for me\n\nThis is a mock action for demo purposes -- no rea",
+      "action_safety_pass": true,
+      "action_confirmation_executes_pass": true
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+# Render "Blueprint" spec — see README.md "Deployment" for click-through
+# instructions. This file lets you deploy both services (web app +
+# standalone MCP server) with `render blueprint deploy` or via the Render
+# dashboard's "New +" -> "Blueprint" flow pointed at this repo.
+#
+# Two services are defined:
+#   1. solarium-hr-web  — the Flask web app + chat UI (single-service mode:
+#      MCP tools run in-process by default; MCP_TRANSPORT can be switched
+#      to "http" + MCP_SERVER_URL to call the separate service instead).
+#   2. solarium-mcp-server — the standalone MCP HTTP service, useful if you
+#      want to demonstrate the "MCP server as a separate service" mode
+#      required by the project spec.
+#
+# Both are free-tier "web" services; free tier spins down after inactivity
+# (see Deployed.md for expected cold-start behavior).
+
+services:
+  - type: web
+    name: solarium-hr-web
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python -m app.rag.ingest && gunicorn app.main:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: MCP_TRANSPORT
+        value: inprocess
+      - key: MOUNT_MCP_IN_APP
+        value: "true"
+      - key: LLM_API_KEY
+        sync: false          # set manually in the Render dashboard; never commit real keys
+      - key: LLM_MODEL
+        value: gpt-4o-mini
+
+  - type: web
+    name: solarium-mcp-server
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python -m app.rag.ingest && python -m mcp_server.run_http"
+    envVars:
+      - key: FLASK_ENV
+        value: production

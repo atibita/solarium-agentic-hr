@@ -1,0 +1,242 @@
+================================================================================
+SOLARIUM INC. — EMPLOYEE FAQ QUICK REFERENCE
+Document ID: SOL-HR-999 | Version 1.8 | Effective: January 1, 2026
+Owner: Governance & People Operations | Classification: Internal — All Employees
+================================================================================
+
+HOW TO USE THIS DOCUMENT
+--------------------------------------------------------------------------------
+This is a fast-answer index, not a replacement for the full policies. Each
+answer below gives you the short version and points to the source document and
+section so you can check the full rule before making a decision that matters
+(e.g., leave timing, large expenses, security exceptions). If a short answer
+here ever conflicts with the full policy document, the full policy controls —
+report the mismatch to governance@solarium.example so we can fix this FAQ.
+
+
+SECTION 1 — PTO, HOLIDAYS, AND LEAVE
+--------------------------------------------------------------------------------
+
+Q: How much PTO do I get?
+A: 15 days/year (0-2 years tenure), 20 days/year (3-5 years), 25 days/year
+   (6+ years), accruing monthly. See SOL-HR-101 Section 2.
+
+Q: How much PTO can I carry over into next year?
+A: Up to 5 days. Anything above that is forfeited on Dec 31 unless your state
+   requires otherwise. See SOL-HR-101 Section 4.
+
+Q: Do I get paid out for unused PTO when I leave?
+A: Where state law requires it, yes, in full. Where it doesn't, Solarium pays
+   out up to 10 days as a matter of policy. See SOL-HR-101 Section 4.
+
+Q: How much notice do I need to give for PTO?
+A: 2 weeks for anything over 3 consecutive days; 5 business days for shorter
+   requests, where practical. See SOL-HR-101 Section 3.
+
+Q: How does sick leave work, and is it different from PTO?
+A: Yes, separate bucket. Accrues at 1 hour per 30 hours worked, capped at 72
+   hours/year. No doctor's note needed for absences of 3 days or fewer.
+   See SOL-HR-101 Section 5.
+
+Q: How much parental leave do I get?
+A: 12 weeks at 100% pay, available from day one of employment, for all
+   parents regardless of gender, birth/adoptive/foster. See SOL-HR-101
+   Section 6.
+
+Q: What if someone in my family dies?
+A: 5 paid days for immediate family, 2 paid days for extended family or a
+   close friend, usable non-consecutively within 60 days. See SOL-HR-101
+   Section 7.
+
+Q: What US holidays does Solarium observe in 2026?
+A: 12 paid holiday days including a Dec 24-31 office-wide Winter Break, plus
+   2 floating holidays per year. Non-US employees follow a local calendar.
+   See SOL-HR-102.
+
+Q: A holiday falls during my vacation — do I lose a PTO day?
+A: No. The day counts as a holiday, not PTO. See SOL-HR-102 Section 7.
+
+
+SECTION 2 — REMOTE WORK AND FLEXIBILITY
+--------------------------------------------------------------------------------
+
+Q: Can I work from home permanently?
+A: Depends on your role's assigned work model (Remote / Hybrid / Office-based),
+   set when the role is created. See SOL-OPS-201 Section 1 and 3.
+
+Q: What are core hours?
+A: At least 4 hours of overlap with your team's published core hours
+   (typically 10am-3pm team time). Outside that, your schedule is flexible.
+   See SOL-OPS-201 Section 2.
+
+Q: Do I get money for setting up a home office?
+A: Yes — a one-time $750 setup stipend within your first 60 days, plus an
+   ongoing $50/month for internet and utilities. See SOL-OPS-201 Section 4.
+
+Q: Can I work from another country for a few weeks?
+A: Short trips within your home country under 30 days: just tell your
+   manager. International or 30+ day trips: submit a Temporary Work Location
+   request at least 10 business days ahead — this is a tax/legal
+   requirement. See SOL-OPS-201 Section 5.
+
+Q: I'm hybrid — how many days do I have to be in the office?
+A: Set by your manager, typically 2-3 days/week, communicated at least 2
+   weeks before it changes. See SOL-OPS-201 Section 9.
+
+
+SECTION 3 — EXPENSES
+--------------------------------------------------------------------------------
+
+Q: How long do I have to submit an expense?
+A: 30 days. After 60 days it needs Controller approval and may be denied.
+   See SOL-FIN-301 Section 2.
+
+Q: Do I need a receipt for every expense?
+A: Only required for expenses over $25, and it must be itemized, not just a
+   card statement line. See SOL-FIN-301 Section 2.
+
+Q: What's the daily meal limit while traveling?
+A: $75/day for business travel meals. See SOL-FIN-301 Section 3.
+
+Q: Can I fly business class?
+A: Only for international flights over 9 hours, and it requires VP-level
+   approval. See SOL-FIN-301 Section 4.
+
+Q: I accidentally used my corporate card for something personal — am I in
+   trouble?
+A: Not if you report it promptly and reimburse Solarium through the process
+   Finance provides. It's treated as a mistake, not a violation, if you fix
+   it quickly. See SOL-FIN-301 Section 5.
+
+Q: How much can my manager approve without escalating?
+A: Up to $2,500 per single expense. Directors up to $10,000, VPs up to
+   $50,000. See SOL-FIN-301 Section 8.
+
+
+SECTION 4 — DATA SECURITY
+--------------------------------------------------------------------------------
+
+Q: I think I clicked a phishing link — what do I do?
+A: Report it immediately using the "Report Phishing" button or email
+   security@solarium.example. Reporting promptly is never itself a
+   disciplinary event. See SOL-SEC-401 Section 8.
+
+Q: My laptop was stolen — what's the deadline to report it?
+A: Within 1 hour of discovery, or as soon as possible via the 24/7 hotline
+   after hours. See SOL-SEC-401 Section 4.3.
+
+Q: Can I paste customer data into an AI chat tool to help draft something?
+A: Never paste Restricted-tier data (customer PII, payment data, credentials,
+   health data) into any AI tool unless it's specifically certified for
+   Restricted data on the tools portal. See SOL-SEC-401 Section 6.
+
+Q: Do I need MFA on everything?
+A: Yes, on every account that supports it — email, SSO, VPN, cloud consoles.
+   SMS-based MFA is discouraged and disallowed for Restricted systems.
+   See SOL-SEC-401 Section 3.
+
+Q: Can I use my personal laptop to check work email?
+A: Yes, via the approved mobile/work-profile app, but personal devices can't
+   be used to access Confidential or Restricted data without a documented
+   BYOD exception. See SOL-SEC-401 Section 4.2.
+
+
+SECTION 5 — BENEFITS
+--------------------------------------------------------------------------------
+
+Q: When do my benefits start?
+A: Day one of employment, for anyone regularly scheduled 20+ hours/week.
+   See SOL-HR-103 Section 2.
+
+Q: How long do I have to enroll?
+A: 30 days from your hire date. Health coverage does NOT default — you must
+   actively enroll or you have no coverage until the next window. Retirement
+   auto-enrolls at 4% if you don't act. See SOL-HR-103 Section 2 and
+   SOL-HR-104 Section 6.
+
+Q: What's the 401(k) match?
+A: 100% match on the first 4% you contribute, then 50% on the next 2% —
+   effectively up to 5% match on a 6% contribution. Vests immediately.
+   See SOL-HR-103 Section 4.
+
+Q: Is there a wellness stipend?
+A: Yes, $75/month for gym, fitness, or mental health apps, submitted like a
+   normal expense. Plus 1 paid wellness day/year separate from PTO.
+   See SOL-HR-103 Section 6.
+
+Q: Can I change my health plan mid-year?
+A: Generally no, unless you have a qualifying life event (marriage, birth,
+   loss of other coverage, etc.), which opens a 30-day window. This is an
+   IRS rule, not a Solarium-specific restriction. See SOL-HR-103 Section 10.
+
+
+SECTION 6 — ONBOARDING
+--------------------------------------------------------------------------------
+
+Q: When will my equipment arrive?
+A: IT ships it to arrive by your start date once your offer is finalized.
+   See SOL-HR-104 Section 1 and SOL-OPS-202 Section 2.
+
+Q: What training do I need to complete, and by when?
+A: Data Security Basics (Day 1), Workplace Conduct training (first 5 business
+   days, then annually), Benefits enrollment (30 days). See SOL-HR-104
+   Section 5.
+
+Q: Who do I ask if something in onboarding seems off track?
+A: Your manager or your onboarding buddy first; People Operations any time.
+   See SOL-HR-104 Section 4.
+
+
+SECTION 7 — EQUIPMENT
+--------------------------------------------------------------------------------
+
+Q: What do I get when I'm hired?
+A: A laptop, monitor, keyboard/mouse, headset, and laptop bag, shipped or
+   available for pickup. See SOL-OPS-202 Section 2.
+
+Q: My laptop broke — what happens?
+A: File an IT ticket. IT troubleshoots remotely first, then arranges a
+   loaner/replacement, typically within 2-5 business days depending on
+   location. Accidental damage is fine to report — no penalty for reporting.
+   See SOL-OPS-202 Section 6.
+
+Q: Do I have to return my laptop when I leave?
+A: Yes — by your last day if local, or within 5 business days by prepaid
+   shipping label if remote. See SOL-OPS-202 Section 9.
+
+Q: Can I get ergonomic equipment like a better chair?
+A: Yes, up to $300 per employee every 3 years, no special justification
+   needed under that amount. See SOL-OPS-202 Section 3.
+
+
+SECTION 8 — WORKPLACE CONDUCT
+--------------------------------------------------------------------------------
+
+Q: How do I report a harassment or conduct concern?
+A: Your manager, another manager you trust, People Operations, the
+   confidential ethics hotline, or General Counsel's office — whichever
+   channel you're most comfortable with. You never have to go through your
+   own manager if they're involved. See SOL-HR-105 Section 5.
+
+Q: Will reporting something get back to the person I reported, or affect me?
+A: Retaliation against a good-faith reporter is itself a serious violation,
+   independently investigated. A report that isn't ultimately substantiated
+   is not treated as a "false report" or held against you. See SOL-HR-105
+   Sections 3.3 and 9.
+
+Q: How long does an investigation take?
+A: Most conclude within 30 days; you'll get a status update if it runs
+   longer. See SOL-HR-105 Section 6.
+
+Q: Is my manager required to report something they overhear, even if I ask
+   them not to?
+A: Yes — managers cannot handle harassment or discrimination concerns off
+   the record. See SOL-HR-105 Section 10.
+
+
+================================================================================
+Still can't find your answer? Post in #ask-people-ops or email
+people-ops@solarium.example with the topic — most questions get a
+same-business-day response. For anything urgent involving security, safety,
+or harassment, use the dedicated channels above rather than waiting.
+================================================================================

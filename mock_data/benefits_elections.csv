@@ -1,0 +1,41 @@
+employee_id,plan_year,benefits_eligible,health_plan,dental,vision,fsa_election,fsa_annual_amount_usd,retirement_contribution_pct,retirement_auto_enrolled,supplemental_life_insurance,wellness_stipend_enrolled,domestic_partner_coverage
+EMP-0001,2026,True,HDHP + HSA,Waived,Enrolled,None,0,15,False,2x Salary,True,False
+EMP-0002,2026,True,HDHP + HSA,Enrolled,Enrolled,None,0,4,True,2x Salary,False,False
+EMP-0003,2026,True,HDHP + HSA,Enrolled,Enrolled,Healthcare FSA,500,4,False,None,True,True
+EMP-0004,2026,True,PPO Health Plan,Enrolled,Waived,None,0,8,False,2x Salary,True,False
+EMP-0005,2026,True,PPO Health Plan,Enrolled,Enrolled,Healthcare FSA,500,8,False,None,False,False
+EMP-0006,2026,True,PPO Health Plan,Enrolled,Waived,None,0,4,False,1x Salary,False,False
+EMP-0007,2026,True,Waived - Covered Elsewhere,Waived,Enrolled,Healthcare FSA,2500,8,False,2x Salary,True,False
+EMP-0008,2026,True,HDHP + HSA,Enrolled,Enrolled,None,0,4,False,1x Salary,False,False
+EMP-0009,2026,True,PPO Health Plan,Enrolled,Enrolled,None,0,15,False,None,True,False
+EMP-0010,2026,True,PPO Health Plan,Enrolled,Enrolled,None,0,10,False,None,True,False
+EMP-0011,2026,True,Waived - Covered Elsewhere,Enrolled,Enrolled,Dependent Care FSA,5000,10,False,None,True,False
+EMP-0012,2026,True,Waived - Covered Elsewhere,Waived,Enrolled,Healthcare FSA,2500,4,True,None,True,False
+EMP-0013,2026,True,HDHP + HSA,Enrolled,Waived,Dependent Care FSA,2000,15,False,None,True,False
+EMP-0014,2026,True,PPO Health Plan,Enrolled,Enrolled,None,0,0,False,None,True,False
+EMP-0015,2026,True,PPO Health Plan,Waived,Enrolled,Both,5000,2,False,None,False,True
+EMP-0016,2026,True,Waived - Covered Elsewhere,Enrolled,Enrolled,Both,1500,4,True,None,True,False
+EMP-0017,2026,True,HDHP + HSA,Enrolled,Enrolled,Healthcare FSA,1500,4,False,3x Salary,False,False
+EMP-0018,2026,True,PPO Health Plan,Enrolled,Enrolled,Both,7500,8,False,3x Salary,True,False
+EMP-0019,2026,True,HDHP + HSA,Enrolled,Enrolled,None,0,2,False,2x Salary,True,True
+EMP-0020,2026,True,PPO Health Plan,Enrolled,Enrolled,Healthcare FSA,500,8,False,2x Salary,True,False
+EMP-0021,2026,True,HDHP + HSA,Waived,Waived,None,0,15,False,3x Salary,True,False
+EMP-0022,2026,False,Not Eligible,Not Eligible,Not Eligible,None,0,0,False,Not Eligible,False,False
+EMP-0023,2026,True,PPO Health Plan,Enrolled,Enrolled,Healthcare FSA,1500,6,False,2x Salary,False,False
+EMP-0024,2026,True,Waived - Covered Elsewhere,Enrolled,Enrolled,Healthcare FSA,2000,6,False,None,False,False
+EMP-0025,2026,True,PPO Health Plan,Enrolled,Enrolled,Dependent Care FSA,3000,15,False,None,False,False
+EMP-0026,2026,False,Not Eligible,Not Eligible,Not Eligible,None,0,0,False,Not Eligible,False,False
+EMP-0027,2026,True,HDHP + HSA,Enrolled,Waived,Healthcare FSA,2000,10,False,2x Salary,True,False
+EMP-0028,2026,True,HDHP + HSA,Enrolled,Enrolled,None,0,15,False,None,False,False
+EMP-0029,2026,False,Not Eligible,Not Eligible,Not Eligible,None,0,0,False,Not Eligible,False,False
+EMP-0030,2026,False,Not Eligible,Not Eligible,Not Eligible,None,0,0,False,Not Eligible,False,False
+EMP-0031,2026,True,PPO Health Plan,Enrolled,Enrolled,None,0,4,True,1x Salary,False,False
+EMP-0032,2026,True,PPO Health Plan,Enrolled,Enrolled,Healthcare FSA,2500,4,False,2x Salary,True,False
+EMP-0033,2026,True,PPO Health Plan,Enrolled,Enrolled,None,0,0,False,1x Salary,False,False
+EMP-0034,2026,True,Waived - Covered Elsewhere,Enrolled,Waived,Healthcare FSA,2000,10,False,None,True,True
+EMP-0035,2026,True,Waived - Covered Elsewhere,Enrolled,Waived,None,0,2,False,1x Salary,False,False
+EMP-0037,2026,True,HDHP + HSA,Waived,Enrolled,None,0,15,False,2x Salary,True,False
+EMP-0039,2026,False,Not Eligible,Not Eligible,Not Eligible,None,0,0,False,Not Eligible,False,False
+EMP-0040,2026,True,PPO Health Plan,Enrolled,Enrolled,None,0,8,False,None,False,False
+EMP-0041,2026,True,HDHP + HSA,Waived,Enrolled,None,0,2,False,None,True,True
+EMP-0042,2026,True,PPO Health Plan,Enrolled,Enrolled,None,0,4,True,None,False,True

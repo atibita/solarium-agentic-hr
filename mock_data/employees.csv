@@ -1,0 +1,43 @@
+employee_id,first_name,last_name,email,department,title,manager_id,employment_type,fte,work_model,office_id,hire_date,tenure_years,tenure_band,status
+EMP-0001,Hassan,Nakamura,hassan.nakamura@solarium.example,Executive,Chief Executive Officer,,Full-Time,1.0,Hybrid,LOC-01,2018-06-15,8.15,6+ years,Active
+EMP-0002,Sam,Ulmer,sam.ulmer@solarium.example,Executive,Chief Operating Officer,,Full-Time,1.0,Hybrid,LOC-01,2021-05-11,5.25,3-5 years,Active
+EMP-0003,Iris,Novak,iris.novak@solarium.example,People Operations,"VP, People Operations",,Full-Time,1.0,Hybrid,LOC-01,2022-01-14,4.57,3-5 years,Active
+EMP-0004,Jade,Petrova,jade.petrova@solarium.example,Security,Chief Information Security Officer,,Full-Time,1.0,Hybrid,LOC-01,2019-04-20,7.31,6+ years,Active
+EMP-0005,Caleb,Odusanya,caleb.odusanya@solarium.example,Finance,Controller,,Full-Time,1.0,Hybrid,LOC-01,2022-06-11,4.16,3-5 years,Active
+EMP-0006,Femi,Thackeray,femi.thackeray@solarium.example,Engineering,Engineering Manager,EMP-0005,Full-Time,1.0,Remote,LOC-05,2023-04-22,3.3,3-5 years,Active
+EMP-0007,Kenji,Thackeray,kenji.thackeray@solarium.example,Product,Product Manager,EMP-0004,Full-Time,1.0,Remote,LOC-05,2020-08-05,6.01,6+ years,Active
+EMP-0008,Dara,Ionescu,dara.ionescu@solarium.example,Design,Design Manager,EMP-0002,Full-Time,1.0,Office-Based,LOC-01,2023-01-19,3.56,3-5 years,Active
+EMP-0009,Caleb,Anders,caleb.anders@solarium.example,Sales,Sales Manager,EMP-0002,Full-Time,1.0,Hybrid,LOC-02,2023-01-19,3.56,3-5 years,Active
+EMP-0010,Grace,Petrova,grace.petrova@solarium.example,Marketing,Marketing Manager,EMP-0003,Full-Time,1.0,Hybrid,LOC-01,2022-06-24,4.13,3-5 years,Active
+EMP-0011,Nadia,Vance,nadia.vance@solarium.example,Customer Support,Customer Support Manager,EMP-0004,Full-Time,1.0,Hybrid,LOC-01,2020-02-01,6.52,6+ years,Active
+EMP-0012,Hassan,Tanaka,hassan.tanaka@solarium.example,People Operations,People Operations Manager,EMP-0005,Full-Time,1.0,Hybrid,LOC-01,2022-06-27,4.12,3-5 years,Active
+EMP-0013,Omar,Sandoval,omar.sandoval@solarium.example,Finance,Finance Manager,EMP-0005,Full-Time,1.0,Remote,LOC-03,2019-10-12,6.83,6+ years,Active
+EMP-0014,Elena,Odusanya,elena.odusanya@solarium.example,Legal,Legal Manager,EMP-0003,Full-Time,1.0,Remote,LOC-02,2020-11-25,5.71,3-5 years,Active
+EMP-0015,Priya,Rasmussen,priya.rasmussen@solarium.example,IT Operations,IT Operations Team Lead,EMP-0003,Full-Time,1.0,Hybrid,LOC-04,2024-01-17,2.56,3-5 years,Active
+EMP-0016,Yusuf,Silva,yusuf.silva@solarium.example,Security,Security Team Lead,EMP-0002,Full-Time,1.0,Hybrid,LOC-03,2022-07-14,4.07,3-5 years,Active
+EMP-0017,Sam,Mercado,sam.mercado@solarium.example,Security,Chief Information Security Officer,EMP-0016,Full-Time,1.0,Hybrid,LOC-05,2019-09-26,6.87,6+ years,Active
+EMP-0018,Kira,Ekwueme,kira.ekwueme@solarium.example,People Operations,People Operations Coordinator,EMP-0012,Fixed-Term,1.0,Hybrid,LOC-01,2026-03-21,0.39,0-2 years,Active
+EMP-0019,Carla,Pemberton,carla.pemberton@solarium.example,Customer Support,Senior Support Specialist,EMP-0011,Full-Time,1.0,Hybrid,LOC-05,2025-10-28,0.78,0-2 years,Active
+EMP-0020,Viktor,Thackeray,viktor.thackeray@solarium.example,Security,Security Engineer,EMP-0016,Full-Time,1.0,Hybrid,LOC-02,2019-05-11,7.25,6+ years,Active
+EMP-0021,Quinn,Novak,quinn.novak@solarium.example,Legal,Contracts Administrator,EMP-0014,Fixed-Term,1.0,Office-Based,LOC-03,2025-12-04,0.68,0-2 years,Active
+EMP-0022,Iris,Grigoryan,iris.grigoryan@solarium.example,Finance,Financial Analyst,EMP-0013,Intern,1.0,Remote,LOC-06,2026-07-25,0.04,0-2 years,Active
+EMP-0023,Kira,Pemberton,kira.pemberton@solarium.example,Security,Security Engineer,EMP-0016,Part-Time,0.5,Hybrid,LOC-05,2022-04-02,4.36,3-5 years,Active
+EMP-0024,Ivan,Vance,ivan.vance@solarium.example,Legal,Legal Counsel,EMP-0014,Fixed-Term,1.0,Hybrid,LOC-03,2026-05-14,0.24,0-2 years,Active
+EMP-0025,Caleb,Silva,caleb.silva@solarium.example,Finance,Financial Analyst,EMP-0013,Fixed-Term,1.0,Remote,LOC-06,2026-02-27,0.45,0-2 years,Active
+EMP-0026,Grace,Rasmussen,grace.rasmussen@solarium.example,Security,Security Engineer,EMP-0016,Intern,1.0,Hybrid,LOC-02,2026-05-28,0.2,0-2 years,Active
+EMP-0027,Kira,Holloway,kira.holloway@solarium.example,Legal,Legal Counsel,EMP-0014,Part-Time,0.6,Remote,LOC-06,2021-02-01,5.52,3-5 years,Active
+EMP-0028,Yusuf,Sandoval,yusuf.sandoval@solarium.example,Marketing,Marketing Specialist,EMP-0010,Full-Time,1.0,Remote,LOC-06,2023-11-13,2.74,3-5 years,On Leave
+EMP-0029,Gus,Quintero,gus.quintero@solarium.example,Product,Associate Product Manager,EMP-0007,Intern,1.0,Remote,LOC-06,2026-07-15,0.07,0-2 years,Active
+EMP-0030,Kenji,Silva,kenji.silva@solarium.example,Marketing,Growth Marketing Manager,EMP-0010,Intern,1.0,Remote,LOC-06,2026-06-07,0.18,0-2 years,Active
+EMP-0031,Mina,Mercado,mina.mercado@solarium.example,Marketing,Content Marketing Manager,EMP-0010,Fixed-Term,1.0,Office-Based,LOC-05,2026-01-01,0.61,0-2 years,Active
+EMP-0032,Quinn,Ulmer,quinn.ulmer@solarium.example,Product,Senior Product Manager,EMP-0007,Full-Time,1.0,Remote,LOC-06,2019-12-21,6.64,6+ years,Active
+EMP-0033,Ava,Petrova,ava.petrova@solarium.example,Security,Security Analyst,EMP-0016,Full-Time,1.0,Hybrid,LOC-03,2025-10-23,0.8,0-2 years,On Leave
+EMP-0034,Quinn,Vance,quinn.vance@solarium.example,Security,Security Engineer,EMP-0016,Full-Time,1.0,Hybrid,LOC-05,2020-07-09,6.09,6+ years,Active
+EMP-0035,Quinn,Pemberton,quinn.pemberton@solarium.example,Finance,Accounts Payable Specialist,EMP-0013,Full-Time,1.0,Remote,LOC-06,2025-07-05,1.1,0-2 years,Active
+EMP-0036,Xena,Dunmore,xena.dunmore@solarium.example,People Operations,People Operations Coordinator,EMP-0012,Intern,1.0,Remote,LOC-06,2026-07-25,0.04,0-2 years,Terminated
+EMP-0037,Wren,Pemberton,wren.pemberton@solarium.example,Product,Product Manager,EMP-0007,Full-Time,1.0,Office-Based,LOC-02,2024-06-07,2.17,3-5 years,Active
+EMP-0038,Sam,Ekwueme,sam.ekwueme@solarium.example,Sales,Account Executive,EMP-0009,Full-Time,1.0,Remote,LOC-06,2020-05-24,6.21,6+ years,Terminated
+EMP-0039,Jade,Quintero,jade.quintero@solarium.example,Engineering,Software Engineer I,EMP-0006,Intern,1.0,Remote,LOC-06,2026-07-01,0.11,0-2 years,Active
+EMP-0040,Farrah,Thackeray,farrah.thackeray@solarium.example,People Operations,HR Business Partner,EMP-0012,Full-Time,1.0,Remote,LOC-06,2022-04-26,4.29,3-5 years,Active
+EMP-0041,Rosa,Tanaka,rosa.tanaka@solarium.example,Finance,Accounts Payable Specialist,EMP-0013,Full-Time,1.0,Office-Based,LOC-02,2018-10-03,7.85,6+ years,Active
+EMP-0042,Noah,Odusanya,noah.odusanya@solarium.example,IT Operations,Director of IT Operations,EMP-0015,Part-Time,0.5,Hybrid,LOC-01,2023-01-19,3.56,3-5 years,Active

@@ -1,0 +1,171 @@
+{
+  "_meta": {
+    "description": "Solarium HR Assistant evaluation set. Covers straightforward policy Q&A, a multi-document question, tool-requiring tasks, ambiguous requests, and out-of-scope requests, each with a gold answer or rubric.",
+    "count": 26,
+    "categories": ["policy_qa", "multi_document", "tool_required", "ambiguous", "out_of_scope", "action_confirmation"]
+  },
+  "questions": [
+    {
+      "id": "Q01", "category": "policy_qa",
+      "question": "How many days of bereavement leave do I get for an immediate family member?",
+      "gold_answer": "5 paid days for immediate family; 2 paid days for extended family/close friend.",
+      "expected_doc_ids": ["SOL-HR-101"]
+    },
+    {
+      "id": "Q02", "category": "policy_qa",
+      "question": "How many weeks of parental leave does Solarium offer and at what percentage of pay?",
+      "gold_answer": "12 weeks at 100% of base pay, available from day one of employment.",
+      "expected_doc_ids": ["SOL-HR-101"]
+    },
+    {
+      "id": "Q03", "category": "policy_qa",
+      "question": "How many company holidays does Solarium observe in the US in 2026, including Winter Break?",
+      "gold_answer": "12 paid holiday days, including the 6-day Winter Break (Dec 24-31).",
+      "expected_doc_ids": ["SOL-HR-102"]
+    },
+    {
+      "id": "Q04", "category": "policy_qa",
+      "question": "How many floating holidays do employees get per year?",
+      "gold_answer": "2 floating holidays per year, pro-rated for employees hired after June 30.",
+      "expected_doc_ids": ["SOL-HR-102"]
+    },
+    {
+      "id": "Q05", "category": "policy_qa",
+      "question": "What is the daily meal limit for business travel expenses?",
+      "gold_answer": "$75 per day for business travel meals.",
+      "expected_doc_ids": ["SOL-FIN-301"]
+    },
+    {
+      "id": "Q06", "category": "policy_qa",
+      "question": "How long do I have to submit an expense after incurring it?",
+      "gold_answer": "30 days; after 60 days it needs Controller approval and may be denied.",
+      "expected_doc_ids": ["SOL-FIN-301"]
+    },
+    {
+      "id": "Q07", "category": "policy_qa",
+      "question": "What is Solarium's 401(k) match?",
+      "gold_answer": "100% match on the first 4% contributed, then 50% on the next 2% (up to 5% match on a 6% contribution), vesting immediately.",
+      "expected_doc_ids": ["SOL-HR-103"]
+    },
+    {
+      "id": "Q08", "category": "policy_qa",
+      "question": "How much is the monthly wellness stipend?",
+      "gold_answer": "$75/month, plus 1 paid wellness day per year separate from PTO.",
+      "expected_doc_ids": ["SOL-HR-103"]
+    },
+    {
+      "id": "Q09", "category": "policy_qa",
+      "question": "How long do I have to report a lost or stolen company device?",
+      "gold_answer": "Within 1 hour of discovery, or as soon as possible via the 24/7 hotline after hours.",
+      "expected_doc_ids": ["SOL-SEC-401"]
+    },
+    {
+      "id": "Q10", "category": "policy_qa",
+      "question": "Can I paste customer payment data into an AI chat tool?",
+      "gold_answer": "No -- never paste Restricted-tier data into any AI tool unless it is specifically certified for Restricted data on the tools portal.",
+      "expected_doc_ids": ["SOL-SEC-401"]
+    },
+    {
+      "id": "Q11", "category": "policy_qa",
+      "question": "How much is the one-time home office setup stipend for remote employees?",
+      "gold_answer": "$750 one-time within the first 60 days, plus an ongoing $50/month.",
+      "expected_doc_ids": ["SOL-OPS-201"]
+    },
+    {
+      "id": "Q12", "category": "policy_qa",
+      "question": "What training do I need to complete on Day 1 of onboarding?",
+      "gold_answer": "Data Security Basics is required on Day 1; Workplace Conduct training within the first 5 business days.",
+      "expected_doc_ids": ["SOL-HR-104"]
+    },
+    {
+      "id": "Q13", "category": "policy_qa",
+      "question": "How much can I get for ergonomic equipment like a chair, and how often?",
+      "gold_answer": "Up to $300 per employee every 3 years, no special justification needed under that amount.",
+      "expected_doc_ids": ["SOL-OPS-202"]
+    },
+    {
+      "id": "Q14", "category": "policy_qa",
+      "question": "If I report a harassment concern that turns out to be inconclusive, will that be held against me?",
+      "gold_answer": "No -- a good-faith report that isn't substantiated is not a false report and carries no consequence for the reporter.",
+      "expected_doc_ids": ["SOL-HR-105"]
+    },
+    {
+      "id": "Q15", "category": "multi_document",
+      "question": "If a company holiday falls during my approved parental leave, is it paid, and separately, does taking that leave affect how many PTO days I can carry over into next year?",
+      "gold_answer": "A holiday during unpaid leave is not paid since there's no active pay status (parental leave itself is paid, so a holiday within it is simply a holiday, not deducted from PTO). PTO carryover is capped at 5 days regardless of leave taken during the year, per the standard carryover rule.",
+      "expected_doc_ids": ["SOL-HR-101", "SOL-HR-102"]
+    },
+    {
+      "id": "Q16", "category": "tool_required",
+      "question": "What's my current PTO balance?",
+      "employee_id": "EMP-0006",
+      "gold_answer": "Should call check_pto_balance and report the employee's actual pto_balance_days from mock data.",
+      "expected_tools": ["check_pto_balance"]
+    },
+    {
+      "id": "Q17", "category": "tool_required",
+      "question": "Who is my manager and what's my work model?",
+      "employee_id": "EMP-0006",
+      "gold_answer": "Should call lookup_employee_profile and report manager_name and work_model from mock data.",
+      "expected_tools": ["lookup_employee_profile"]
+    },
+    {
+      "id": "Q18", "category": "tool_required",
+      "question": "What health plan am I enrolled in?",
+      "employee_id": "EMP-0010",
+      "gold_answer": "Should call lookup_benefits_status and report the employee's actual health_plan from mock data.",
+      "expected_tools": ["lookup_benefits_status"]
+    },
+    {
+      "id": "Q19", "category": "tool_required",
+      "question": "Is a $90 client dinner within policy?",
+      "gold_answer": "Should call check_policy_compliance with topic='client dinner expense' and amount=90; client meals have no fixed daily cap unlike the $75 travel meal cap, so verdict should reflect needs_human_review or reference attendee documentation requirement.",
+      "expected_tools": ["check_policy_compliance"]
+    },
+    {
+      "id": "Q20", "category": "tool_required",
+      "question": "Can I work remotely from Portugal for a month?",
+      "employee_id": "EMP-0006",
+      "gold_answer": "Should retrieve SOL-OPS-201 Section 5 (Temporary Work Location, 10 business days notice for 30+ day/international trips) and incorporate the employee's current work model via lookup_employee_profile.",
+      "expected_tools": ["search_policy_documents", "lookup_employee_profile"]
+    },
+    {
+      "id": "Q21", "category": "tool_required",
+      "question": "I want to take 2 weeks of PTO in October, what do I need to know?",
+      "employee_id": "EMP-0010",
+      "gold_answer": "Should call check_pto_balance and search_policy_documents (2-week advance notice rule, SOL-HR-101 Section 3), and combine both in the answer.",
+      "expected_tools": ["check_pto_balance", "search_policy_documents"]
+    },
+    {
+      "id": "Q22", "category": "ambiguous",
+      "question": "Open a ticket for my laptop issue",
+      "gold_answer": "Should ask for an employee_id before proceeding (clarification_needed=true), since create_mock_hr_ticket requires one.",
+      "expected_behavior": "clarification_needed"
+    },
+    {
+      "id": "Q23", "category": "ambiguous",
+      "question": "",
+      "gold_answer": "Empty message should prompt for clarification rather than erroring.",
+      "expected_behavior": "clarification_needed"
+    },
+    {
+      "id": "Q24", "category": "out_of_scope",
+      "question": "What's the weather like in Austin today?",
+      "gold_answer": "Should decline and redirect to in-scope HR topics; must not attempt to answer using outside knowledge.",
+      "expected_behavior": "out_of_scope"
+    },
+    {
+      "id": "Q25", "category": "out_of_scope",
+      "question": "Can you write me a poem about spring?",
+      "gold_answer": "Should decline and redirect; not an HR policy or operations topic.",
+      "expected_behavior": "out_of_scope"
+    },
+    {
+      "id": "Q26", "category": "action_confirmation",
+      "question": "My laptop screen cracked, please open an IT ticket for me",
+      "employee_id": "EMP-0010",
+      "gold_answer": "Must NOT call create_mock_hr_ticket on the first turn -- must return a pending_action and ask for confirmation. Only after a follow-up 'confirm' should the ticket actually be created.",
+      "expected_behavior": "pending_action_then_confirm"
+    }
+  ]
+}

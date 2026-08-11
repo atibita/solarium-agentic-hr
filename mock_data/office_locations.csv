@@ -1,0 +1,7 @@
+office_id,office_name,city,state_region,country,timezone,is_headquarters
+LOC-01,Solarium HQ - Austin,Austin,TX,USA,America/Chicago,True
+LOC-02,Solarium - Denver,Denver,CO,USA,America/Denver,False
+LOC-03,Solarium - New York,New York,NY,USA,America/New_York,False
+LOC-04,Solarium - Toronto,Toronto,ON,Canada,America/Toronto,False
+LOC-05,Solarium - Lisbon,Lisbon,,Portugal,Europe/Lisbon,False
+LOC-06,Remote - No Assigned Office,,,,,False

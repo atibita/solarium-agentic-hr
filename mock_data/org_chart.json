@@ -1,0 +1,479 @@
+{
+  "_meta": {
+    "description": "SYNTHETIC MOCK DATA - Solarium Inc. reporting relationships. Not real people.",
+    "record_count": 42
+  },
+  "employees": [
+    {
+      "employee_id": "EMP-0001",
+      "name": "Hassan Nakamura",
+      "title": "Chief Executive Officer",
+      "department": "Executive",
+      "manager_id": null,
+      "manager_name": null,
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0002",
+      "name": "Sam Ulmer",
+      "title": "Chief Operating Officer",
+      "department": "Executive",
+      "manager_id": null,
+      "manager_name": null,
+      "direct_report_ids": [
+        "EMP-0008",
+        "EMP-0009",
+        "EMP-0016"
+      ],
+      "direct_report_count": 3
+    },
+    {
+      "employee_id": "EMP-0003",
+      "name": "Iris Novak",
+      "title": "VP, People Operations",
+      "department": "People Operations",
+      "manager_id": null,
+      "manager_name": null,
+      "direct_report_ids": [
+        "EMP-0010",
+        "EMP-0014",
+        "EMP-0015"
+      ],
+      "direct_report_count": 3
+    },
+    {
+      "employee_id": "EMP-0004",
+      "name": "Jade Petrova",
+      "title": "Chief Information Security Officer",
+      "department": "Security",
+      "manager_id": null,
+      "manager_name": null,
+      "direct_report_ids": [
+        "EMP-0007",
+        "EMP-0011"
+      ],
+      "direct_report_count": 2
+    },
+    {
+      "employee_id": "EMP-0005",
+      "name": "Caleb Odusanya",
+      "title": "Controller",
+      "department": "Finance",
+      "manager_id": null,
+      "manager_name": null,
+      "direct_report_ids": [
+        "EMP-0006",
+        "EMP-0012",
+        "EMP-0013"
+      ],
+      "direct_report_count": 3
+    },
+    {
+      "employee_id": "EMP-0006",
+      "name": "Femi Thackeray",
+      "title": "Engineering Manager",
+      "department": "Engineering",
+      "manager_id": "EMP-0005",
+      "manager_name": "Caleb Odusanya",
+      "direct_report_ids": [
+        "EMP-0039"
+      ],
+      "direct_report_count": 1
+    },
+    {
+      "employee_id": "EMP-0007",
+      "name": "Kenji Thackeray",
+      "title": "Product Manager",
+      "department": "Product",
+      "manager_id": "EMP-0004",
+      "manager_name": "Jade Petrova",
+      "direct_report_ids": [
+        "EMP-0029",
+        "EMP-0032",
+        "EMP-0037"
+      ],
+      "direct_report_count": 3
+    },
+    {
+      "employee_id": "EMP-0008",
+      "name": "Dara Ionescu",
+      "title": "Design Manager",
+      "department": "Design",
+      "manager_id": "EMP-0002",
+      "manager_name": "Sam Ulmer",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0009",
+      "name": "Caleb Anders",
+      "title": "Sales Manager",
+      "department": "Sales",
+      "manager_id": "EMP-0002",
+      "manager_name": "Sam Ulmer",
+      "direct_report_ids": [
+        "EMP-0038"
+      ],
+      "direct_report_count": 1
+    },
+    {
+      "employee_id": "EMP-0010",
+      "name": "Grace Petrova",
+      "title": "Marketing Manager",
+      "department": "Marketing",
+      "manager_id": "EMP-0003",
+      "manager_name": "Iris Novak",
+      "direct_report_ids": [
+        "EMP-0028",
+        "EMP-0030",
+        "EMP-0031"
+      ],
+      "direct_report_count": 3
+    },
+    {
+      "employee_id": "EMP-0011",
+      "name": "Nadia Vance",
+      "title": "Customer Support Manager",
+      "department": "Customer Support",
+      "manager_id": "EMP-0004",
+      "manager_name": "Jade Petrova",
+      "direct_report_ids": [
+        "EMP-0019"
+      ],
+      "direct_report_count": 1
+    },
+    {
+      "employee_id": "EMP-0012",
+      "name": "Hassan Tanaka",
+      "title": "People Operations Manager",
+      "department": "People Operations",
+      "manager_id": "EMP-0005",
+      "manager_name": "Caleb Odusanya",
+      "direct_report_ids": [
+        "EMP-0018",
+        "EMP-0036",
+        "EMP-0040"
+      ],
+      "direct_report_count": 3
+    },
+    {
+      "employee_id": "EMP-0013",
+      "name": "Omar Sandoval",
+      "title": "Finance Manager",
+      "department": "Finance",
+      "manager_id": "EMP-0005",
+      "manager_name": "Caleb Odusanya",
+      "direct_report_ids": [
+        "EMP-0022",
+        "EMP-0025",
+        "EMP-0035",
+        "EMP-0041"
+      ],
+      "direct_report_count": 4
+    },
+    {
+      "employee_id": "EMP-0014",
+      "name": "Elena Odusanya",
+      "title": "Legal Manager",
+      "department": "Legal",
+      "manager_id": "EMP-0003",
+      "manager_name": "Iris Novak",
+      "direct_report_ids": [
+        "EMP-0021",
+        "EMP-0024",
+        "EMP-0027"
+      ],
+      "direct_report_count": 3
+    },
+    {
+      "employee_id": "EMP-0015",
+      "name": "Priya Rasmussen",
+      "title": "IT Operations Team Lead",
+      "department": "IT Operations",
+      "manager_id": "EMP-0003",
+      "manager_name": "Iris Novak",
+      "direct_report_ids": [
+        "EMP-0042"
+      ],
+      "direct_report_count": 1
+    },
+    {
+      "employee_id": "EMP-0016",
+      "name": "Yusuf Silva",
+      "title": "Security Team Lead",
+      "department": "Security",
+      "manager_id": "EMP-0002",
+      "manager_name": "Sam Ulmer",
+      "direct_report_ids": [
+        "EMP-0017",
+        "EMP-0020",
+        "EMP-0023",
+        "EMP-0026",
+        "EMP-0033",
+        "EMP-0034"
+      ],
+      "direct_report_count": 6
+    },
+    {
+      "employee_id": "EMP-0017",
+      "name": "Sam Mercado",
+      "title": "Chief Information Security Officer",
+      "department": "Security",
+      "manager_id": "EMP-0016",
+      "manager_name": "Yusuf Silva",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0018",
+      "name": "Kira Ekwueme",
+      "title": "People Operations Coordinator",
+      "department": "People Operations",
+      "manager_id": "EMP-0012",
+      "manager_name": "Hassan Tanaka",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0019",
+      "name": "Carla Pemberton",
+      "title": "Senior Support Specialist",
+      "department": "Customer Support",
+      "manager_id": "EMP-0011",
+      "manager_name": "Nadia Vance",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0020",
+      "name": "Viktor Thackeray",
+      "title": "Security Engineer",
+      "department": "Security",
+      "manager_id": "EMP-0016",
+      "manager_name": "Yusuf Silva",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0021",
+      "name": "Quinn Novak",
+      "title": "Contracts Administrator",
+      "department": "Legal",
+      "manager_id": "EMP-0014",
+      "manager_name": "Elena Odusanya",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0022",
+      "name": "Iris Grigoryan",
+      "title": "Financial Analyst",
+      "department": "Finance",
+      "manager_id": "EMP-0013",
+      "manager_name": "Omar Sandoval",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0023",
+      "name": "Kira Pemberton",
+      "title": "Security Engineer",
+      "department": "Security",
+      "manager_id": "EMP-0016",
+      "manager_name": "Yusuf Silva",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0024",
+      "name": "Ivan Vance",
+      "title": "Legal Counsel",
+      "department": "Legal",
+      "manager_id": "EMP-0014",
+      "manager_name": "Elena Odusanya",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0025",
+      "name": "Caleb Silva",
+      "title": "Financial Analyst",
+      "department": "Finance",
+      "manager_id": "EMP-0013",
+      "manager_name": "Omar Sandoval",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0026",
+      "name": "Grace Rasmussen",
+      "title": "Security Engineer",
+      "department": "Security",
+      "manager_id": "EMP-0016",
+      "manager_name": "Yusuf Silva",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0027",
+      "name": "Kira Holloway",
+      "title": "Legal Counsel",
+      "department": "Legal",
+      "manager_id": "EMP-0014",
+      "manager_name": "Elena Odusanya",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0028",
+      "name": "Yusuf Sandoval",
+      "title": "Marketing Specialist",
+      "department": "Marketing",
+      "manager_id": "EMP-0010",
+      "manager_name": "Grace Petrova",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0029",
+      "name": "Gus Quintero",
+      "title": "Associate Product Manager",
+      "department": "Product",
+      "manager_id": "EMP-0007",
+      "manager_name": "Kenji Thackeray",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0030",
+      "name": "Kenji Silva",
+      "title": "Growth Marketing Manager",
+      "department": "Marketing",
+      "manager_id": "EMP-0010",
+      "manager_name": "Grace Petrova",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0031",
+      "name": "Mina Mercado",
+      "title": "Content Marketing Manager",
+      "department": "Marketing",
+      "manager_id": "EMP-0010",
+      "manager_name": "Grace Petrova",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0032",
+      "name": "Quinn Ulmer",
+      "title": "Senior Product Manager",
+      "department": "Product",
+      "manager_id": "EMP-0007",
+      "manager_name": "Kenji Thackeray",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0033",
+      "name": "Ava Petrova",
+      "title": "Security Analyst",
+      "department": "Security",
+      "manager_id": "EMP-0016",
+      "manager_name": "Yusuf Silva",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0034",
+      "name": "Quinn Vance",
+      "title": "Security Engineer",
+      "department": "Security",
+      "manager_id": "EMP-0016",
+      "manager_name": "Yusuf Silva",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0035",
+      "name": "Quinn Pemberton",
+      "title": "Accounts Payable Specialist",
+      "department": "Finance",
+      "manager_id": "EMP-0013",
+      "manager_name": "Omar Sandoval",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0036",
+      "name": "Xena Dunmore",
+      "title": "People Operations Coordinator",
+      "department": "People Operations",
+      "manager_id": "EMP-0012",
+      "manager_name": "Hassan Tanaka",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0037",
+      "name": "Wren Pemberton",
+      "title": "Product Manager",
+      "department": "Product",
+      "manager_id": "EMP-0007",
+      "manager_name": "Kenji Thackeray",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0038",
+      "name": "Sam Ekwueme",
+      "title": "Account Executive",
+      "department": "Sales",
+      "manager_id": "EMP-0009",
+      "manager_name": "Caleb Anders",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0039",
+      "name": "Jade Quintero",
+      "title": "Software Engineer I",
+      "department": "Engineering",
+      "manager_id": "EMP-0006",
+      "manager_name": "Femi Thackeray",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0040",
+      "name": "Farrah Thackeray",
+      "title": "HR Business Partner",
+      "department": "People Operations",
+      "manager_id": "EMP-0012",
+      "manager_name": "Hassan Tanaka",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0041",
+      "name": "Rosa Tanaka",
+      "title": "Accounts Payable Specialist",
+      "department": "Finance",
+      "manager_id": "EMP-0013",
+      "manager_name": "Omar Sandoval",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    },
+    {
+      "employee_id": "EMP-0042",
+      "name": "Noah Odusanya",
+      "title": "Director of IT Operations",
+      "department": "IT Operations",
+      "manager_id": "EMP-0015",
+      "manager_name": "Priya Rasmussen",
+      "direct_report_ids": [],
+      "direct_report_count": 0
+    }
+  ]
+}

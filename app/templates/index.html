@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solarium HR Assistant</title>
+<meta name="description" content="Agentic RAG assistant for Solarium HR policy and operations questions.">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22%231f4e3d%22/></svg>">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ===================== Sidebar ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <div class="brand-text">
+          <strong>Solarium</strong>
+          <span>HR Assistant</span>
+        </div>
+      </div>
+      <button class="icon-btn sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+    </div>
+
+    <div class="sidebar-section">
+      <label class="sidebar-label" for="employeeSelect">Acting as</label>
+      <select id="employeeSelect" class="select-input">
+        <option value="">No employee ID (general policy questions only)</option>
+      </select>
+      <p class="sidebar-hint">Synthetic demo data only — <a href="/mock_data_note" onclick="return false;">no real employee records</a>.</p>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Try a demo task</span>
+      <div id="demoTaskList" class="demo-task-list"><!-- populated by chat.js --></div>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-label">Topics I can help with</span>
+      <div class="topic-chips">
+        <span class="chip">PTO &amp; Leave</span>
+        <span class="chip">Holidays</span>
+        <span class="chip">Remote Work</span>
+        <span class="chip">Expenses</span>
+        <span class="chip">Data Security</span>
+        <span class="chip">Benefits</span>
+        <span class="chip">Onboarding</span>
+        <span class="chip">Equipment</span>
+        <span class="chip">Conduct</span>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="status-row">
+        <span class="status-dot" id="healthDot"></span>
+        <span id="healthLabel">Checking system status…</span>
+      </div>
+      <div class="status-row small" id="llmModeLabel">
+        {% if llm_configured %}LLM synthesis: enabled{% else %}LLM synthesis: offline template mode{% endif %}
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+
+  <!-- ===================== Main column ===================== -->
+  <div class="main-col">
+
+    <header class="topbar">
+      <button class="icon-btn sidebar-open" id="sidebarOpen" aria-label="Open menu">&#9776;</button>
+      <h1>Solarium HR Assistant</h1>
+      <button class="icon-btn" id="traceToggleBtn" title="Show/hide agent trace" aria-pressed="false">
+        <span class="trace-toggle-label">Trace</span>
+      </button>
+    </header>
+
+    <main class="chat-main">
+      <div class="chat-scroll" id="chatScroll">
+
+        <div class="msg msg-agent">
+          <div class="msg-avatar" aria-hidden="true">S</div>
+          <div class="msg-bubble">
+            <p>Hi! I'm the Solarium HR Assistant. I can answer questions grounded in our policy
+            corpus (PTO, holidays, remote work, expenses, security, benefits, onboarding, equipment,
+            conduct) and look up your PTO balance, benefits, or profile if you select an employee ID
+            on the left.</p>
+            <p>Every policy answer is cited back to the source document and section — try asking
+            something like <em>“How many weeks of parental leave do I get?”</em></p>
+          </div>
+        </div>
+
+      </div>
+
+      <form class="composer" id="composerForm" autocomplete="off">
+        <textarea
+          id="messageInput"
+          class="composer-input"
+          placeholder="Ask about PTO, benefits, remote work, expenses…"
+          rows="1"
+          maxlength="2000"
+          required
+        ></textarea>
+        <button type="submit" class="composer-send" id="sendBtn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2 11 13" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 2 15 22l-4-9-9-4 20-7Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+      <p class="composer-hint">The assistant only answers from the Solarium policy corpus and your
+        synthetic HR records — it will say so if something is out of scope or not covered.</p>
+    </main>
+  </div>
+
+  <!-- ===================== Trace / evidence panel ===================== -->
+  <aside class="trace-panel" id="tracePanel" aria-hidden="true">
+    <div class="trace-panel-header">
+      <h2>Agent trace</h2>
+      <button class="icon-btn" id="traceCloseBtn" aria-label="Close trace panel">&times;</button>
+    </div>
+    <p class="trace-panel-hint">Concise operational trace — selected tools, arguments, and
+      retrieved sources for the most recent answer. Not a hidden chain-of-thought.</p>
+    <div id="traceContent" class="trace-content">
+      <p class="trace-empty">Ask a question to see the agent's tool-call trace here.</p>
+    </div>
+  </aside>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
